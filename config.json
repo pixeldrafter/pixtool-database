@@ -1,0 +1,126 @@
+{
+    "version": "3.0.0",
+    "last_updated": "2026-01-08 12:07:10.938438",
+    "tabs": [
+        {
+            "name": "Windows",
+            "categories": [
+                {
+                    "name": "\ud83c\udfaf Format Sonras\u0131",
+                    "items": [
+                        {
+                            "name": "Ninite (Toplu Kurulum)",
+                            "type": "link",
+                            "value": "https://ninite.com/"
+                        },
+                        {
+                            "name": "Chris Titus WinUtil",
+                            "type": "script",
+                            "value": "irm christitus.com/win | iex"
+                        },
+                        {
+                            "name": "Chocolatey Kur",
+                            "type": "script",
+                            "value": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd0c S\u00fcr\u00fcc\u00fcler",
+                    "items": [
+                        {
+                            "name": "Nvidia S\u00fcr\u00fcc\u00fcleri",
+                            "type": "link",
+                            "value": "https://www.nvidia.com/Download/index.aspx"
+                        },
+                        {
+                            "name": "AMD S\u00fcr\u00fcc\u00fcleri",
+                            "type": "link",
+                            "value": "https://www.amd.com/en/support"
+                        },
+                        {
+                            "name": "Intel S\u00fcr\u00fcc\u00fcleri",
+                            "type": "link",
+                            "value": "https://www.intel.com/content/www/us/en/download-center/home.html"
+                        },
+                        {
+                            "name": "Asus Support",
+                            "type": "link",
+                            "value": "https://www.asus.com/support/download-center/"
+                        },
+                        {
+                            "name": "Lenovo Support",
+                            "type": "link",
+                            "value": "https://support.lenovo.com/"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd11 Lisanslama",
+                    "items": [
+                        {
+                            "name": "Massgrave (Windows/Office)",
+                            "type": "script",
+                            "value": "irm https://massgrave.dev/get | iex"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83c\udf93 Atat\u00fcrk \u00dcniversitesi",
+                    "items": [
+                        {
+                            "name": "Eduroam Ayarlar\u0131",
+                            "type": "link",
+                            "value": "https://bilgiislem.atauni.edu.tr/eduroam/"
+                        },
+                        {
+                            "name": "E-\u0130mza Kurulumu",
+                            "type": "link",
+                            "value": "https://birimler.atauni.edu.tr/atabaum/e-imza-kurulumu/"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83e\uddf9 Sistem Bak\u0131m\u0131",
+                    "items": [
+                        {
+                            "name": "Ge\u00e7ici Dosyalar\u0131 Sil",
+                            "type": "script",
+                            "value": "@echo off\ndel /s /f /q %temp%\\*.*\nrd /s /q %temp%\necho Temizlik Bitti!"
+                        },
+                        {
+                            "name": "Update Cache Temizle",
+                            "type": "script",
+                            "value": "net stop wuauserv\nrd /s /q C:\\Windows\\SoftwareDistribution\\Download\nnet start wuauserv"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sistem Ara\u00e7lar\u0131",
+            "categories": [
+                {
+                    "name": "Onar\u0131m",
+                    "items": [
+                        {
+                            "name": "SFC /Scannow",
+                            "type": "script",
+                            "value": "sfc /scannow"
+                        }
+                    ]
+                },
+                {
+                    "name": "A\u011f",
+                    "items": [
+                        {
+                            "name": "DNS Temizle",
+                            "type": "script",
+                            "value": "ipconfig /flushdns"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
