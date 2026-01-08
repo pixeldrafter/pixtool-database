@@ -1,7 +1,7 @@
 {
     "version": "4.1.0 (Ultimate Edition)",
     "last_updated": "2026-01-08 14:36:18.670702",
-    "theme": "White",
+    "theme": "Custom",
     "tabs": [
         {
             "name": "Ara\u00e7 Kutusu",
@@ -419,5 +419,25 @@
                 }
             ]
         }
-    ]
+    ],
+    "custom_theme": {
+        "name": "\u2600\ufe0f Ayd\u0131nl\u0131k",
+        "mode": "light",
+        "bg": "#ffffff",
+        "fg": "#ffffff",
+        "sidebar": "#e8e8e8",
+        "topbar": "#ffffff",
+        "card": "#ffffff",
+        "card_hover": "#f0f0f0",
+        "text": "#1a1a1a",
+        "text_dim": "#444444",
+        "accent": "#2196F3",
+        "accent_hover": "#1976D2",
+        "button": "#2196F3",
+        "button_hover": "#1976D2",
+        "category_bg": "#e3f2fd",
+        "category_text": "#0d47a1",
+        "font_size": 24,
+        "icon_size": 31
+    }
 }
