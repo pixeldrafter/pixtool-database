@@ -1,7 +1,7 @@
 {
     "version": "4.0.0 (Ultimate Edition)",
     "last_updated": "2026-01-08 14:10:59.583870",
-    "theme": "Dark",
+    "theme": "Custom",
     "tabs": [
         {
             "name": "\ud83d\udee0\ufe0f Ara\u00e7 Kutusu",
@@ -419,5 +419,25 @@
                 }
             ]
         }
-    ]
+    ],
+    "custom_theme": {
+        "name": "\ud83d\udc80 Hacker",
+        "mode": "dark",
+        "bg": "#000000",
+        "fg": "#0a0a0a",
+        "sidebar": "#000000",
+        "topbar": "#000000",
+        "card": "#001a00",
+        "card_hover": "#002600",
+        "text": "#00ff00",
+        "text_dim": "#00aa00",
+        "accent": "#00ff00",
+        "accent_hover": "#00cc00",
+        "button": "#ff0000",
+        "button_hover": "#004d00",
+        "category_bg": "#ff0000",
+        "category_text": "#00ff00",
+        "font_size": 13,
+        "icon_size": 31
+    }
 }
