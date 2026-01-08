@@ -1,0 +1,582 @@
+{
+    "version": "3.6.0 (Restored Ultimate)",
+    "last_updated": "2026-01-08 13:32:22.220437",
+    "theme": "Dark",
+    "tabs": [
+        {
+            "name": "\ud83d\udee0\ufe0f Ara\u00e7 Kutusu",
+            "categories": [
+                {
+                    "name": "\ud83d\udea8 Acil M\u00fcdahale",
+                    "items": [
+                        {
+                            "name": "WiFi \u015eifrelerini \u00c7ek",
+                            "type": "script",
+                            "value": "netsh wlan show profiles name=* key=clear | findstr \"Key Content\""
+                        },
+                        {
+                            "name": "Hayalet Modu (\u0130z Sil)",
+                            "type": "script",
+                            "value": "\nwevtutil el | Foreach-Object {wevtutil cl \"$_\"}\nipconfig /flushdns\ndel /s /f /q %temp%\\*.*\necho \u0130zler silindi, hayaletsin Patron!\n    "
+                        },
+                        {
+                            "name": "IP Adreslerim",
+                            "type": "script",
+                            "value": "curl ifconfig.me && ipconfig /all"
+                        },
+                        {
+                            "name": "DNS \u00d6nbelle\u011fini Temizle",
+                            "type": "script",
+                            "value": "ipconfig /flushdns"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udccb Marka & Rapor",
+                    "items": [
+                        {
+                            "name": "Sistem Raporu (\u00d6mer \u00c7atalo\u011flu)",
+                            "type": "script",
+                            "value": "\nsysteminfo > %userprofile%\\Desktop\\Rapor_OmerCataloglu.txt\nwmic product get name,version >> %userprofile%\\Desktop\\Rapor_OmerCataloglu.txt\necho Rapor Masa\u00fcst\u00fcne Kaydedildi: Rapor_OmerCataloglu.txt\n    "
+                        },
+                        {
+                            "name": "OEM \u0130mzas\u0131 Bas",
+                            "type": "script",
+                            "value": "\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Manufacturer /t REG_SZ /d \"\u00d6mer \u00c7atalo\u011flu\" /f\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /t REG_SZ /d \"PixTool Pro Workstation\" /f\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v SupportURL /t REG_SZ /d \"https://omercataloglu.com\" /f\necho Marka bas\u0131ld\u0131!\n    "
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd17 Uzaktan Yard\u0131m",
+                    "items": [
+                        {
+                            "name": "AnyDesk \u0130ndir",
+                            "type": "link",
+                            "value": "https://anydesk.com/en/downloads/windows"
+                        },
+                        {
+                            "name": "TeamViewer \u0130ndir",
+                            "type": "link",
+                            "value": "https://www.teamviewer.com/en/download/windows/"
+                        },
+                        {
+                            "name": "Alpemix \u0130ndir",
+                            "type": "link",
+                            "value": "https://alpemix.com/site/Alpemix.exe"
+                        },
+                        {
+                            "name": "RustDesk",
+                            "type": "link",
+                            "value": "https://rustdesk.com/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udcbf Format Sonras\u0131",
+            "categories": [
+                {
+                    "name": "\ud83d\udd0c S\u00fcr\u00fcc\u00fcler",
+                    "items": [
+                        {
+                            "name": "Nvidia Drivers",
+                            "type": "link",
+                            "value": "https://www.nvidia.com/Download/index.aspx"
+                        },
+                        {
+                            "name": "AMD Drivers",
+                            "type": "link",
+                            "value": "https://www.amd.com/en/support"
+                        },
+                        {
+                            "name": "Intel Drivers",
+                            "type": "link",
+                            "value": "https://www.intel.com/content/www/us/en/download-center/home.html"
+                        },
+                        {
+                            "name": "Asus Support",
+                            "type": "link",
+                            "value": "https://www.asus.com/support/download-center/"
+                        },
+                        {
+                            "name": "Dell Support",
+                            "type": "link",
+                            "value": "https://www.dell.com/support/home/"
+                        },
+                        {
+                            "name": "Lenovo Support",
+                            "type": "link",
+                            "value": "https://support.lenovo.com/"
+                        },
+                        {
+                            "name": "HP Support",
+                            "type": "link",
+                            "value": "https://support.hp.com/us-en/drivers"
+                        },
+                        {
+                            "name": "MSI Support",
+                            "type": "link",
+                            "value": "https://www.msi.com/support/download"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udcbe Temel Kurulumlar",
+                    "items": [
+                        {
+                            "name": "Ninite (Toplu Kurulum)",
+                            "type": "link",
+                            "value": "https://ninite.com/"
+                        },
+                        {
+                            "name": "Chris Titus WinUtil",
+                            "type": "script",
+                            "value": "powershell -Command \"irm christitus.com/win | iex\""
+                        },
+                        {
+                            "name": "Chocolatey Kur",
+                            "type": "script",
+                            "value": "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd11 Lisanslama",
+                    "items": [
+                        {
+                            "name": "MassGrave (Win/Office)",
+                            "type": "script",
+                            "value": "powershell -Command \"irm https://massgrave.dev/get | iex\""
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83c\udf93 Atat\u00fcrk \u00dcniversitesi",
+                    "items": [
+                        {
+                            "name": "E-\u0130mza Kurulumu",
+                            "type": "link",
+                            "value": "https://birimler.atauni.edu.tr/atabaum/e-imza-kurulumu/"
+                        },
+                        {
+                            "name": "Eduroam Ayarlar\u0131",
+                            "type": "link",
+                            "value": "https://birimler.atauni.edu.tr/atabaum/eduroam/"
+                        },
+                        {
+                            "name": "ATAUNI Yaz\u0131l\u0131mlar",
+                            "type": "link",
+                            "value": "https://yazilim.atauni.edu.tr/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udd27 Sistem Ara\u00e7lar\u0131",
+            "categories": [
+                {
+                    "name": "\ud83e\uddf9 Temizlik & Bak\u0131m",
+                    "items": [
+                        {
+                            "name": "Detayl\u0131 Disk Temizleme",
+                            "type": "script",
+                            "value": "cleanmgr /sagerun:1"
+                        },
+                        {
+                            "name": "Temp Dosyalar\u0131n\u0131 Sil",
+                            "type": "script",
+                            "value": "del /q/f/s %TEMP%\\*"
+                        },
+                        {
+                            "name": "Windows Update Onar",
+                            "type": "script",
+                            "value": "\nnet stop wuauserv\nnet stop cryptSvc\nnet stop bits\nnet stop msiserver\nren C:\\Windows\\SoftwareDistribution SoftwareDistribution.old\nren C:\\Windows\\System32\\catroot2 catroot2.old\nnet start wuauserv\nnet start cryptSvc\nnet start bits\nnet start msiserver\necho Windows Update onar\u0131ld\u0131!\n    "
+                        },
+                        {
+                            "name": "DISM RestoreHealth",
+                            "type": "script",
+                            "value": "DISM /Online /Cleanup-Image /RestoreHealth"
+                        },
+                        {
+                            "name": "SFC Scan",
+                            "type": "script",
+                            "value": "sfc /scannow"
+                        }
+                    ]
+                },
+                {
+                    "name": "\u2699\ufe0f Windows Ayarlar\u0131",
+                    "items": [
+                        {
+                            "name": "God Mode Klas\u00f6r\u00fc Olu\u015ftur",
+                            "type": "script",
+                            "value": "mkdir \"%userprofile%\\Desktop\\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}\""
+                        },
+                        {
+                            "name": "Denetim Masas\u0131",
+                            "type": "script",
+                            "value": "control"
+                        },
+                        {
+                            "name": "Program Ekle/Kald\u0131r",
+                            "type": "script",
+                            "value": "appwiz.cpl"
+                        },
+                        {
+                            "name": "Hizmetler",
+                            "type": "script",
+                            "value": "services.msc"
+                        },
+                        {
+                            "name": "G\u00f6rev Y\u00f6neticisi",
+                            "type": "script",
+                            "value": "taskmgr"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd12 G\u00fcvenlik",
+                    "items": [
+                        {
+                            "name": "Windows G\u00fcvenli\u011fi",
+                            "type": "script",
+                            "value": "start windowsdefender:"
+                        },
+                        {
+                            "name": "G\u00fcvenlik Duvar\u0131 (Geli\u015fmi\u015f)",
+                            "type": "script",
+                            "value": "wf.msc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udcbb Yaz\u0131l\u0131mlar",
+            "categories": [
+                {
+                    "name": "\ud83d\udee1\ufe0f Antivir\u00fcs",
+                    "items": [
+                        {
+                            "name": "Kaspersky Free",
+                            "type": "link",
+                            "value": "https://www.kaspersky.com.tr/downloads/free-antivirus"
+                        },
+                        {
+                            "name": "Malwarebytes",
+                            "type": "link",
+                            "value": "https://www.malwarebytes.com/mwb-download"
+                        },
+                        {
+                            "name": "ESET Online Scanner",
+                            "type": "link",
+                            "value": "https://www.eset.com/tr/home/online-scanner/"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udcbd Disk & USB",
+                    "items": [
+                        {
+                            "name": "Rufus",
+                            "type": "link",
+                            "value": "https://rufus.ie/"
+                        },
+                        {
+                            "name": "Ventoy",
+                            "type": "link",
+                            "value": "https://www.ventoy.net/en/download.html"
+                        },
+                        {
+                            "name": "BalenaEtcher",
+                            "type": "link",
+                            "value": "https://www.balena.io/etcher/"
+                        },
+                        {
+                            "name": "MiniTool Partition",
+                            "type": "link",
+                            "value": "https://www.partitionwizard.com/free-partition-manager.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udcca Donan\u0131m Bilgisi",
+                    "items": [
+                        {
+                            "name": "HWiNFO",
+                            "type": "link",
+                            "value": "https://www.hwinfo.com/download/"
+                        },
+                        {
+                            "name": "CPU-Z",
+                            "type": "link",
+                            "value": "https://www.cpuid.com/softwares/cpu-z.html"
+                        },
+                        {
+                            "name": "GPU-Z",
+                            "type": "link",
+                            "value": "https://www.techpowerup.com/download/techpowerup-gpu-z/"
+                        },
+                        {
+                            "name": "CrystalDiskInfo",
+                            "type": "link",
+                            "value": "https://crystalmark.info/en/software/crystaldiskinfo/"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd25 Stress Testi",
+                    "items": [
+                        {
+                            "name": "OCCT",
+                            "type": "link",
+                            "value": "https://www.ocbase.com/"
+                        },
+                        {
+                            "name": "FurMark",
+                            "type": "link",
+                            "value": "https://geeks3d.com/furmark/"
+                        },
+                        {
+                            "name": "Prime95",
+                            "type": "link",
+                            "value": "https://www.mersenne.org/download/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udc27 Linux",
+            "categories": [
+                {
+                    "name": "\ud83d\udce6 Da\u011f\u0131t\u0131m Se\u00e7",
+                    "items": [
+                        {
+                            "name": "DistroWatch (Da\u011f\u0131t\u0131m Bul)",
+                            "type": "link",
+                            "value": "https://distrowatch.com/"
+                        },
+                        {
+                            "name": "Ubuntu \u0130ndir",
+                            "type": "link",
+                            "value": "https://ubuntu.com/download/desktop"
+                        },
+                        {
+                            "name": "Kali Linux \u0130ndir",
+                            "type": "link",
+                            "value": "https://www.kali.org/get-kali/"
+                        },
+                        {
+                            "name": "Linux Mint \u0130ndir",
+                            "type": "link",
+                            "value": "https://linuxmint.com/download.php"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udee0\ufe0f Temel Komutlar",
+                    "items": [
+                        {
+                            "name": "Sistem G\u00fcncelle (Debian/Ubuntu)",
+                            "type": "script",
+                            "value": "echo 'sudo apt update && sudo apt upgrade -y'"
+                        },
+                        {
+                            "name": "Dosya Ara (Find)",
+                            "type": "script",
+                            "value": "echo 'find / -name \"dosya_adi\"'"
+                        },
+                        {
+                            "name": "\u00c7al\u0131\u015ft\u0131rma Yetkisi Ver",
+                            "type": "script",
+                            "value": "echo 'chmod +x dosya_adi'"
+                        },
+                        {
+                            "name": "A\u00e7\u0131k Portlar\u0131 G\u00f6r",
+                            "type": "script",
+                            "value": "echo 'ss -tulpn'"
+                        },
+                        {
+                            "name": "Disk Alan\u0131 Kontrol\u00fc",
+                            "type": "script",
+                            "value": "echo 'df -h'"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83c\udf53 Raspberry & Arduino",
+            "categories": [
+                {
+                    "name": "\ud83c\udf53 Raspberry Pi",
+                    "items": [
+                        {
+                            "name": "Raspberry Pi Imager",
+                            "type": "link",
+                            "value": "https://www.raspberrypi.com/software/"
+                        },
+                        {
+                            "name": "Pinout \u015eemas\u0131",
+                            "type": "link",
+                            "value": "https://pinout.xyz/"
+                        },
+                        {
+                            "name": "Config Men\u00fcs\u00fc (Komut)",
+                            "type": "script",
+                            "value": "echo 'sudo raspi-config'"
+                        },
+                        {
+                            "name": "S\u0131cakl\u0131k \u00d6l\u00e7 (Komut)",
+                            "type": "script",
+                            "value": "echo 'vcgencmd measure_temp'"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83e\udd16 Arduino",
+                    "items": [
+                        {
+                            "name": "Arduino IDE \u0130ndir",
+                            "type": "link",
+                            "value": "https://www.arduino.cc/en/software"
+                        },
+                        {
+                            "name": "Tinkercad Circuits",
+                            "type": "link",
+                            "value": "https://www.tinkercad.com/circuits"
+                        },
+                        {
+                            "name": "Fritzing",
+                            "type": "link",
+                            "value": "https://fritzing.org/download/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83d\udcbc Ofis & \u00dcretkenlik",
+            "categories": [
+                {
+                    "name": "\ud83d\udcc4 PDF & Dok\u00fcman",
+                    "items": [
+                        {
+                            "name": "Adobe Reader",
+                            "type": "link",
+                            "value": "https://get.adobe.com/tr/reader/"
+                        },
+                        {
+                            "name": "LibreOffice",
+                            "type": "link",
+                            "value": "https://www.libreoffice.org/download/download-libreoffice/"
+                        }
+                    ]
+                },
+                {
+                    "name": "\u2601\ufe0f Bulut & Not",
+                    "items": [
+                        {
+                            "name": "Notion",
+                            "type": "link",
+                            "value": "https://www.notion.so/desktop"
+                        },
+                        {
+                            "name": "Obsidian",
+                            "type": "link",
+                            "value": "https://obsidian.md/"
+                        },
+                        {
+                            "name": "Google Drive",
+                            "type": "link",
+                            "value": "https://drive.google.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\ud83c\udfae Oyun & Topluluk",
+            "categories": [
+                {
+                    "name": "\ud83d\udd79\ufe0f Launcherlar",
+                    "items": [
+                        {
+                            "name": "Steam",
+                            "type": "link",
+                            "value": "https://store.steampowered.com/about/"
+                        },
+                        {
+                            "name": "Epic Games",
+                            "type": "link",
+                            "value": "https://store.epicgames.com/en-US/download"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udde3\ufe0f Topluluk",
+                    "items": [
+                        {
+                            "name": "Technopat Sosyal",
+                            "type": "link",
+                            "value": "https://www.technopat.net/sosyal/"
+                        },
+                        {
+                            "name": "Donan\u0131mHaber",
+                            "type": "link",
+                            "value": "https://forum.donanimhaber.com/"
+                        },
+                        {
+                            "name": "Reddit r/techsupport",
+                            "type": "link",
+                            "value": "https://www.reddit.com/r/techsupport/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "\u26a1 H\u0131zl\u0131 Linkler",
+            "categories": [
+                {
+                    "name": "\ud83c\udf1f \u00d6mer \u00c7atalo\u011flu Special",
+                    "items": [
+                        {
+                            "name": "OmerCataloglu.com",
+                            "type": "link",
+                            "value": "https://omercataloglu.com"
+                        },
+                        {
+                            "name": "N8N Otomasyon",
+                            "type": "link",
+                            "value": "https://otomasyon.omercataloglu.com"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83e\udd16 Yapay Zeka",
+                    "items": [
+                        {
+                            "name": "ChatGPT",
+                            "type": "link",
+                            "value": "https://chat.openai.com/"
+                        },
+                        {
+                            "name": "Claude AI",
+                            "type": "link",
+                            "value": "https://claude.ai/"
+                        },
+                        {
+                            "name": "Midjourney",
+                            "type": "link",
+                            "value": "https://www.midjourney.com/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
