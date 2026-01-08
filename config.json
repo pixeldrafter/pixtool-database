@@ -431,7 +431,7 @@
         "card_hover": "#002600",
         "text": "#00ff00",
         "text_dim": "#00aa00",
-        "accent": "#00ff00",
+        "accent": "#ffffff",
         "accent_hover": "#00cc00",
         "button": "#3ec144",
         "button_hover": "#004d00",
