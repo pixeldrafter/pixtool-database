@@ -1,0 +1,67 @@
+{
+    "version": "3.5.0 (Ultimate)",
+    "last_updated": "2026-01-08 13:23:50.719575",
+    "theme": "Dark",
+    "tabs": [
+        {
+            "name": "\ud83d\udee0\ufe0f Ara\u00e7 Kutusu",
+            "categories": [
+                {
+                    "name": "\ud83d\udea8 Acil Durum",
+                    "items": [
+                        {
+                            "name": "WiFi \u015eifrelerini \u00c7ek",
+                            "type": "script",
+                            "value": "netsh wlan show profiles name=* key=clear | findstr \"Key Content\""
+                        },
+                        {
+                            "name": "Hayalet Modu (\u0130z Sil)",
+                            "type": "script",
+                            "value": "\nwevtutil el | Foreach-Object {wevtutil cl \"$_\"}\nipconfig /flushdns\ndel /s /f /q %temp%\\*.*\necho \u0130zler silindi, hayaletsin Patron!\n    "
+                        },
+                        {
+                            "name": "IP Adreslerim",
+                            "type": "script",
+                            "value": "curl ifconfig.me && ipconfig /all"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udccb Raporlama & Marka",
+                    "items": [
+                        {
+                            "name": "Detayl\u0131 Sistem Raporu",
+                            "type": "script",
+                            "value": "\nsysteminfo > %userprofile%\\Desktop\\Sistem_Raporu.txt\nwmic product get name,version >> %userprofile%\\Desktop\\Sistem_Raporu.txt\necho Rapor Masa\u00fcst\u00fcne Kaydedildi! \n    "
+                        },
+                        {
+                            "name": "OEM \u0130mzas\u0131 Bas (\u00d6mer \u00c7atalo\u011flu)",
+                            "type": "script",
+                            "value": "\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Manufacturer /t REG_SZ /d \"\u00d6mer \u00c7atalo\u011flu\" /f\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /t REG_SZ /d \"PixTool Pro Workstation\" /f\nreg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v SupportURL /t REG_SZ /d \"https://omercataloglu.com\" /f\necho Marka bas\u0131ld\u0131!\n    "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Windows",
+            "categories": [
+                {
+                    "name": "\ud83c\udfaf Format Sonras\u0131",
+                    "items": [
+                        {
+                            "name": "Ninite (Toplu Kurulum)",
+                            "type": "link",
+                            "value": "https://ninite.com/"
+                        },
+                        {
+                            "name": "Chris Titus WinUtil",
+                            "type": "script",
+                            "value": "irm christitus.com/win | iex"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
