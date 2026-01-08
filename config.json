@@ -1,0 +1,85 @@
+{
+    "version": "5.0.0 (God Mode Edition)",
+    "last_updated": "2026-01-08 15:40:21.644819",
+    "theme": "Dark",
+    "custom_theme": {
+        "name": "\ud83c\udf19 Karanl\u0131k",
+        "mode": "dark",
+        "bg": "#0a0a0a",
+        "fg": "#1a1a1a",
+        "sidebar": "#0f0f0f",
+        "topbar": "#1a1a1a",
+        "card": "#242424",
+        "card_hover": "#2a2a2a",
+        "text": "#e0e0e0",
+        "text_dim": "#a0a0a0",
+        "accent": "#0d7377",
+        "accent_hover": "#14a1a8",
+        "button": "#0d7377",
+        "button_hover": "#14a1a8",
+        "category_bg": "#1f3a5f",
+        "category_text": "#ffffff",
+        "font_size": 12,
+        "icon_size": 32
+    },
+    "tabs": [
+        {
+            "name": "Ara\u00e7 Kutusu",
+            "icon": "\ud83d\udee0\ufe0f",
+            "categories": [
+                {
+                    "name": "\ud83d\udce1 A\u011f & WiFi",
+                    "items": [
+                        {
+                            "name": "WiFi \u015eifrelerini \u00c7ek",
+                            "type": "script",
+                            "value": "netsh wlan show profiles name=* key=clear | findstr \"Key Content\"",
+                            "icon": "\ud83d\udcf6"
+                        },
+                        {
+                            "name": "T\u00fcm WiFi Profilleri",
+                            "type": "script",
+                            "value": "netsh wlan show profiles",
+                            "icon": "\ud83d\udccb"
+                        },
+                        {
+                            "name": "IP Bilgilerim",
+                            "type": "script",
+                            "value": "curl ifconfig.me && echo. && ipconfig /all",
+                            "icon": "\ud83c\udf10"
+                        },
+                        {
+                            "name": "Google Ping Test",
+                            "type": "script",
+                            "value": "ping -t google.com",
+                            "icon": "\ud83d\udce1"
+                        }
+                    ]
+                },
+                {
+                    "name": "\ud83d\udd12 G\u00fcvenlik",
+                    "items": [
+                        {
+                            "name": "Hayalet Modu",
+                            "type": "script",
+                            "value": "\nwevtutil el | Foreach-Object {wevtutil cl \"$_\"}\nipconfig /flushdns\ndel /s /f /q %temp%\\*.*\necho \u0130zler silindi, hayaletsin Patron!\n    ",
+                            "icon": "\ud83d\udc7b"
+                        },
+                        {
+                            "name": "\u015eifre \u00dcretici",
+                            "type": "python",
+                            "value": "password_generator",
+                            "icon": "\ud83d\udd11"
+                        },
+                        {
+                            "name": "Dosya K\u0131yma",
+                            "type": "python",
+                            "value": "file_shredder",
+                            "icon": "\ud83d\udd2a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
