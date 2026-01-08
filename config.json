@@ -433,11 +433,11 @@
         "text_dim": "#00aa00",
         "accent": "#00ff00",
         "accent_hover": "#00cc00",
-        "button": "#ff0000",
+        "button": "#003300",
         "button_hover": "#004d00",
-        "category_bg": "#ff0000",
+        "category_bg": "#003300",
         "category_text": "#00ff00",
         "font_size": 13,
-        "icon_size": 31
+        "icon_size": 30
     }
 }
