@@ -607,8 +607,8 @@
             "icon_size": 30,
             "admin_btn_size": 37,
             "monitor_font_size": 15,
-            "edit_icon": "\u270f\ufe0f",
-            "del_icon": "\ud83d\uddd1\ufe0f"
+            "edit_icon": "\u270fD",
+            "del_icon": "\ud83d\uddd1S"
         }
     }
 }
