@@ -593,7 +593,7 @@
             "fg": "#1a1a1a",
             "sidebar": "#80ff00",
             "topbar": "#1a1a1a",
-            "card": "#000000",
+            "card": "#ff0000",
             "card_hover": "#2a2a2a",
             "text": "#e0e0e0",
             "text_dim": "#a0a0a0",
